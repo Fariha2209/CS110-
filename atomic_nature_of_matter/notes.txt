@@ -1,0 +1,89 @@
+1. For each problem, state its goal in your own words and describe your approach to solve the 
+problem along with any issues you encountered and if/how you managed to solve those issues.
+
+[Problem 1 (Particle Representation)]
+
+Goal: Create a program that represents a blob (particle) in an image, where each blob represents a collection/list of pixels. We want to store the position of the Blob, the number of pixels in that blob and also calculate the distance between two Blobs. 
+
+Approach: 
+
+Firstly, I created a Blob class that initializes a Blob with it's (x, y) position set to (0, 0) and pixel count to 0. 
+
+Secondly, we created an add() method that allows us to update the position of the Blob everytime a pixel is added to the Blob. This is done by using the given formula to calculate the new self._x and self._y
+This also add 1 to the pixels to update the value of pixels.
+
+Thirdly, we create another method called mass(). The mass of the blob is simply the number of pixels it has so this method just returns the pixels value of the Blob. 
+
+Fourthly, we create a method called distanceTo(). This method is used to calculate the distance between the center of two blobs. We use the distance formula in order to compute this value which is then returned.
+
+Finlly, we create a __str__() method which returns the mass of the Blob and the (x, y) value at the center of the Blob. 
+
+
+[Problem 2 (Particle Identification)]
+
+Goal: The goal of this program is to identify Blobs (a group of pixels which have the same luminance). We use tau as a threshold value to check which pixels are a part of which Blob. Once we find those Blobs, we can determine the size of the blobs basee on the number of the pixels.
+
+Approach: 
+
+1. BlobFinder class finds the  blobs in a picture, the input values for this class are the picture and tau (thresholding value).
+
+2. The program then loops through every picture in the picture and assigns it to a specific blob based on it's luminance. 
+
+3. The program also checks for the neighboring pixels by checking the nearest pixel in the North, South, East, West direction. 
+
+4. Once a blob is identified, it is marked to make sure that it isn't being checked again. 
+
+5. The program also checks if the size of the Blob is large enough by checking if it is greater than a set pixel count.
+
+6. The program then prints the blobs and how many pixels are in each blob. 
+
+
+[Problem 3 (Particle Tracking)]
+
+Goal: The goal of this program is to identify and track Blobs in a sequence of Images. 
+
+Approach: 
+
+1. The program takes the pixel, tau, delta and frame through command-line input. 
+
+2. The blobFinder checks the first image and finds the blobs which meets size and luminance requirements. 
+
+3. This is repeated for the next image.
+
+4. It compres the blob from the first image to the blob in the second image. The program then checks if the distance between the blobs are within delta value. 
+
+5. If the blobs are within that distance value, it then prints the distance between the two blobs. 
+
+6. After checking this, the program updates the list and then compares the next image with the current one. 
+
+[Problem 4 (Estimating Avogadro's Constant)]
+
+Goal: The goal of this program is to estimate avogadro's constant using displacement data.  The program calculates the variance and uses it to compute the Boltzman constant and Avogadro's constant. 
+
+Approach: 
+
+1. I provided the constant values needed for the calculations.
+
+2. The program then reads a series of values from the standard input
+
+3. The program then calculates the variance of these displacement values taken from the standard input using the variance formula provided.
+
+4. The Boltzman's constant is also calculated using the provided formula.
+
+Using the boltzman's constant, we finally compute the avogadro's constant.
+
+5. The final output is a formatted string that gives the value of Avogadro's constant. 
+
+2. Did you receive any help? List the sources along with a short description of the help received.
+
+Source                               Help Received
+------                               -------------
+
+TA                                 My avogadro.py program kept running into errors due to me giving a wrong constant value. My TA was able to help me resolve that issue.
+Google                             I used google plenty of times to figure out what python commands i can use and how they function. 
+
+
+3. List any other comments here. Feel free to provide any feedback on how much you learned from
+doing the assignment, and whether you enjoyed doing it.
+
+I had a hard time doing this assignment because I feel like a lot of parts i myself culd not fully understnading why the code was working or wasn't. I just choose not to experiment and find out once the code did work.

@@ -1,0 +1,68 @@
+
+Program 1: rsa.py
+
+Goal: The goal of this program is to create a library which has all the helper functions needed to RSA keygen.py, encrypt.py, and decrypt.py 
+
+Approach: Define the functions needed to do the following tasks - 
+
+Keygen(lo, hi): Generates a pair of prime numbers and computes the values n, e, d
+encrypt(x, n, e): Encrypts integer x using the public key (n, e)
+decrpyt(x, n, e): Decrypts integer y using the private key(n, d)
+_primes(lo, hi): returns a list of prime numbers between the lo and hi value using _is_prime()
+_sample(a, k): Randomly selects k elements from list a using stdrandom
+_choice(a): used for selection
+_is_prime(n): Checks if the integer is a prime number or not
+bitLength(n): Returns the number of bits needed to represent the integer n
+dec2bin(n, width): Converts decimal int n to a binary string of a set width 
+bin2dec(n): Converts a binary string n to decimal integer value
+
+Issues & Resolution: 
+
+Initially I forgot to add return result in _sample(a, k) which caused my program to not run. 
+I resolved that issue by adding return result to ensure that _sample(a, k) was giving the correct output
+
+I also added an extra line of in _primes() which was p = p + 1. This was redundant because the for loop was already updating the value of p.
+I removed that extra line. 
+
+Program 2: Keygen.py
+
+Goal: Creates RSA public and private keys using two numbers (a lower and upper limit) given by the user
+
+Approach: Use sys.argv to get two numbers from command line
+Called the ekygen(lo, hi) functions from the rsa.py library to generate the keys 
+Generate a standard output that writes the keys (n, e, d) using stdio.writeln()
+
+Issues & Resolution: 
+
+At first i forgot to import sys which caused my program to not collect the command-line arguments
+I resolved it by importing it
+
+Program 3: Encrypt.py
+
+Goal: Encrypt a message using RSA encryption and write the message as binary
+
+Approach: Take the public keys (n, e) from the command line 
+Use rsa.bitLength(n) to calculate the length of the bit
+Use stdio.readAll() to read message to encrypt from the input
+Use ord() to convert the characters to its ASCII integer
+Encrypt integer using rsa.encrypt and convert the encrypted integer to binary using rsa.dec2bin()
+use stdio.writeln() to write the output in the correct format
+
+Issues & Resolution: 
+
+For both my encrypt and decrypt codes, i was encpuntering issues and was unable to solve them. 
+
+
+Program 4: Decrypt.py
+
+Goal: Decrypt a RSA encrypted message and write the original message as output
+
+Approach: Take the private keys generated (n, d) from command-line and calculate the bitLength of n using rsa.bitLength()
+Read the encrypted message usin stdio.readstring()
+Split the message into blocks of length (width = bitlength of n)
+Every block is then converted to integer using rsa.bin2dec() and decrypted using rsa.decrypt()
+The decrypted integer is then converted to a character and written as standard output
+
+Issues & Resolution: 
+
+For both my encrypt and decrypt codes, i was encpuntering issues and was unable to solve them. 

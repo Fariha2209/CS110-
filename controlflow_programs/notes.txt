@@ -1,0 +1,221 @@
+
+Problem 1: quadratic.py
+ 
+Goal: The goal of this program is to create a program that solves the quadratic formula to compute the coefficients a, b and c.  
+
+Approach:
+I created three variables, a, b and c.
+I assigned the variable a the value sys.argv[1], this will take the first command line input as the value of name. 
+I assigned the variable b the value sys.argv[2], this will take the second command line input as the value of age.
+I assigned the variable c the value sys.argv[3], this will take the second command line input as the value of age.
+
+The program then calculates the discriminant using the fomula assigned.
+
+Then i used the write.stdio to write the output message i want when i run the program. 
+
+Issues & Resolution: 
+I did not encounter any issue in this program.
+
+Program 2: wind_chill.py
+
+Goal: The goal of this program is to create a program that takes two inputs, t (temp) and v (in miles) and 
+calculate the ind chill using the formula.
+
+Approach:
+I created 2 variables t and v. 
+I assigned the variables the values t = sys.argv[1] and v = sys.argv[2].
+
+Then i used stdio.writeln to write the computed value of w as the output. 
+
+
+Issues & Resolution: 
+In this program i did not encounter any issues.
+
+
+Program 3: day_of_week.py
+
+Goal: The goal of this program is to create a program that takes three inputs as m(int) = sys.argv[1], d(int) = sys.argv[2], y(int) = sys.argv[3].
+The program then computes the day of the week using the formulas given. 
+
+Approach:
+I created three variables, m, d, and y and assigned them to sys.argv[1], sys.argv[2] and sys.argv[3]
+For my output, I used stdio.writeln to write (int(dow)) as the output. 
+
+Issues & Resolution: 
+My output was initially coming as a float which did not match the type o output the assignment wanted.
+I changed my output code to stdio.writeln(int(dow)) to change the output type to int.
+
+
+Program 4: die.py
+
+Goal: The goal of this program is to stimulate the roll of a six sided die and print the pattern of the top face. 
+
+Approach:
+I used stdrandom.Uniformaint(1, 6) to geenrate a random number between 1 - 6.
+The output message writes the pattern of the top facing number of the die. 
+
+Issues & Resolution:
+I struggled a lot with the format of the output mesage to properly show the pattern of the number. It took multiple tries to fix it. 
+
+Program 5: card.py
+
+Goal: The goal of this program is to randomly select a card from a deck of cards and then write it as an output. 
+
+Approach:
+I used stdrandom.randint to generate a random number that associates to a rank.
+I used stdrandom.randint to generate a random number that associates to a suit.
+
+I used stdio.writeln to print the card as in the format "Rank of Suit"
+
+Issues & Resolution:
+My code initially wouldn't run correctly because i did not correctly assign numbers, i fixed it by reassigning corect numbers to the rank and suit. 
+
+Program 6: dragon_curve.py
+
+Goal: The goal of this program is to write a standard output that instructs how to draw a dragon curve of order n.
+
+Approach:
+I wrote n to find the order of the curve from the command-line argument.
+I define dragon = "F" and nogard = "F" 
+I then created a system to store the current dragon in a temporary variable which gets updated after every iteration. 
+
+I finally used stdio.writeln to write the final output of dragon. 
+
+
+Issues: 
+I did struggled a little with the writing of the code but i did it in discussion class when the TA was able to guide me. 
+
+
+Program 7: gcd.py
+
+Goal: The goal of this program is to take two command-line inputs p and q and computes the dreatest common divisor using the formula given.
+
+Approach:
+
+I created two variables p and q and assigned them the values sys.argv[1], sys.argv[2].
+I used the while loop to apply the condition to swap p and q until p % q == 0.
+When the loop ends, the value is gcd
+
+I used stdio.writeln to write the computed results as standard output.
+
+Issues & Resolution:
+
+For this program, i did not face any issues. 
+
+Program 8: sum_of_powers.py
+
+Goal: The goal of this program is to take two command-line inputs and compute the sum of powers.
+
+Approach:
+
+I created two variables n and k and assigned the values sys.argv[1], and sys.argv[2].
+I added a variable total = 0 to store the value of the sum.
+I used a for loop to iterate 1 to n and used total to add the result. 
+
+I used stdio.writeln to write the computed results as the standard output
+
+Issues & Resolution:
+
+There were no issues with this code. 
+
+Program 9: Factorial.py
+
+Goal: The goal for this program is to compute the factorial of the given input value.
+
+Approach:
+
+I created one variable n and assigned them the value sys.argv[1].
+
+I used a for loop to iterate from 1 to n multiplying the result to each number. 
+
+I used stdio.write to write the computed results as a standard output.
+
+Issues & Resolution:
+
+I did not have issues with this program 
+
+Program 10: fibonacci.py
+
+Goal: The goal of this program is to convert r and theta into x and y coordinates. 
+
+Approach:
+I created two variables r and theta and assigned them the values sys.argv[1] and sys.argv[2]
+I defined x and y with the formulas needed to convert r and theta into x and y
+I used write.stdio to write the computed results as the standard output.
+
+Issues & Resolution:
+
+I struggled in this question beause i did not know how to do sin cos computations in Python.
+To esolve this issue i looked up in google how i can use sin and cos in python.
+
+Program 11: 
+
+Program 12: primality_test.py
+
+Goal: The goal of this program is to test if an integer is a prime number.
+
+Approach:
+
+I created a variable n and assigned it the value sys.argv[1].
+
+I then used the conditions n <=1 and n % i == 0 to check whether the number is prime or not.
+
+I used stdio.writeln to write the final result. 
+
+Issues & Resolution:
+In this program, i struggled with the loop because it kept showing errors. I eventually fixed it by redoing my code through trial and error. 
+
+
+Program 13: prime_counters.py
+
+Goal: The goal of this program is to count and display the number of prime numbers that are less or equal to a given number. 
+
+Approach:
+
+I created one variable n and assigned them the value sys.argv[1].
+I set count = 0
+I then used for loop to iterate all values till n + 1 checking whether each number is prime
+
+I used stdio.writeln(count) to write the output value. 
+
+Issues & Resolution: 
+I had issues checking the divisibility of the prime numbers but i eventually figured out it was a typo in my code. 
+
+Program 14: perfect_numbers.py
+
+Goal: The goal of this program is to identify and write all the perfect numbers less than or equal to number n. 
+
+Approach:
+I created one variable named n and assigned it the value sys.argv[1] 
+I used two for loops to iterate all the values in the range and calculated the sum of the divisors. 
+If the sum of divisors are equal to the number n it is a perfect number. 
+
+I then used stdio.writeln to write the values of computed value as the standard output
+
+Issues & Resolution: 
+I had an issue with the code because instead of using // i used / for the second for loop which caused my program to not run properly. 
+
+Program 15: Ramanujan Numbers
+
+Goal: The goal of this program is to check for ramanajun numbers. 
+
+Approach:
+I created one variable n and assigned the value sys.argv[1]
+I set a to 1 and created a loop that iterated until a**3 <= n.
+I set b to a + 1 and created a loop that iterates until a**3 + b**3 <= n 
+I set c to a + 1 and created a loop that iterates until c**3 <= n 
+I set d to c + 1 and created a loop that iterates until c**3 + d**3 <= n 
+we then set s = a**3 + b**3 and y = c**3 + d**3 
+
+
+I used the stdio.writeln to write the computed result of the program. 
+
+Issues & Resolution: 
+
+For some reason when i write my stdio statement, it does not identify d as a variable even though it is present in the code. I figured that was a syntax problem because the value was not a str so i changed in=t to str. 
+
+Secondly, i initally just put n = sys.argv[1] without changing the input into an int so it was not working. 
+
+
+
+

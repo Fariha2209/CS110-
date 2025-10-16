@@ -1,0 +1,49 @@
+1. For each problem, state its goal in your own words and describe your approach to solve the 
+problem along with any issues you encountered and if/how you managed to solve those issues.
+
+[Problem 1 (Markov Model Data Type)]
+
+Goal: The goal of the first program was to build a markov model that can track patterns in a text and how often a character follows them.
+For each Kgram, the program keeps track of what characters come after in the text. This is used to later geenrate similar text or guess the missing characters.
+
+Approach: 
+
+I made a class called MarkovModel thats takes an input text and stores every k-gram with the characters that come after it in a symbol table.
+I then used a loop to go through the text and count how often each character follows a given kgram.
+It looks at every group of K characetrs and records which characters come after. The model has functions to also randomly choose a next character based on the frequencies.  
+Another function replaces the unknown characters "~" in a corrupted message with the most likely ones using the model.
+
+[Problem 2 (Random Text Generator)]
+
+Goal: To use the Markov Model to generate random text that is similar to the original input text
+
+Approach: 
+
+The program takes two comman line arguments: k, (Order of the model) and n (the number of characters we need to generate)
+It reads the full input text from standard inputIt creates a MarkovModel object using the input text and value of K
+It starts with the first k characters of the input and uses the model to generate characters of new text
+Lastly, it writes the generated text as output.
+
+[Problem 3 (Noisy Message Decoder)]
+
+Goal: To fix a corrupted message which has some characters that are missing or "~" and using the Markov model to fix that message based on the original text.
+
+Approach: 
+
+The program takes two command-line arguments: k (the order of the model) and the corrupted message.
+It reads the original text from the standard input and creates a Markov Model using the Text and K.
+It then uses the replace_unknown() method from the model to gurss and replace the missing characters in the corrupted message.
+Lastly, it writes the decoded message.
+
+
+2. Did you receive any help? List the sources along with a short description of the help received.
+
+Source                               Help Received
+------                               -------------
+
+Discussion slides                    Step-by-Step breakdown of what i need to do and also Pseudocode for the corrupted message
+
+3. List any other comments here. Feel free to provide any feedback on how much you learned from
+doing the assignment, and whether you enjoyed doing it.
+
+THANK YOU FOR THE SEMESTER!! WILL BE BACK FOR CS

@@ -1,0 +1,233 @@
+Problem 1: name_age.py
+ 
+Goal: The goal of this program is to create a program that takes two inputs, name and age, and generate an output message that writes
+"name is age years old"
+
+Approach:
+I created two variables, name and age.
+I assigned the variable name the value sys.argv[1], this will take the first command line input as the value of name. 
+I assigned the variable age the value sys.argv[2], this will take the second command line input as the value of age.
+
+Then i used the write.stdio to write the output message i want when i run the program. 
+I called the name and age variable in that message. 
+
+Issues & Resolution: 
+When I first wrote the program, it was not matching the exact text as there was no space inbetween the words so the code was wrong. 
+I fixed it by adding space in my message and fixed the spacing issue. 
+
+Program 2: greet_three.py
+
+Goal: The goal of this program is to create a program that takes three inputs, name3, name2, and name1, and 
+generate an output message that writes "Hi name3, name2, name1"
+
+Approach:
+I created 3 variables, name3, name2 and name1
+I assigned the variables the values name3 = sys.argv[1], name2 = sys.argv[2] and name1 = sys.argv[3]
+
+Then i used stdio.writeln to write the output message i want when i run the program.
+I checked the order to make sure name3 goes first.
+
+Issues & Resolution: 
+In this program i did not encounter any issues but i realised that it's really important to make sure my output message matches exactly as the assignment.
+
+
+Program 3: day_of_week.py
+
+Goal: The goal of this program is to create a program that takes three inputs as m(int) = sys.argv[1], d(int) = sys.argv[2], y(int) = sys.argv[3].
+The program then computes the day of the week using the formulas given. 
+
+Approach:
+I created three variables, m, d, and y and assigned them to sys.argv[1], sys.argv[2] and sys.argv[3]
+For my output, I used stdio.writeln to write (int(dow)) as the output. 
+
+Issues & Resolution: 
+My output was initially coming as a float which did not match the type o output the assignment wanted.
+I changed my output code to stdio.writeln(int(dow)) to change the output type to int.
+
+
+Program 4: three_sort.py
+
+Goal: The goal of this program is to receive three command-line inputs as x, y, and z. 
+The output of this program will be x, y, and z arranged in an ascending order. 
+
+Approach:
+I created three variable x, y, z and assigned them the values sys.argv[1], sys.argv[2] and sys.argv[3]
+Using the max() and min() functions to determine the largest input and the smallest input value. 
+To find the mid we add (x, y, z) and subtract the max() and min() value. 
+
+The output writes a message that gives us the min(), mid() and max() in ascending order. 
+
+Issues & Resolution:
+Initially I thought the math module had the min() and max() function but it did not so i ended up using the python in-built min() and max()
+
+Another issue I encountered was that my output message was a concatenation however, i forgot to change my min(), mid() and max() values to strings.
+I resolved that by changing their types to string by adding str 
+
+Program 5: bmi.py
+
+Goal: The goal of this program is to take two command-line inputs and compute the bmi using the formula
+
+Approach:
+I created two variable w (weight) and h (height) and assigned them the values sys.argv[1] and sys.argv[2]
+I defined the bmi formula and then used stdio.writeln(float(bmi)) as the output message.
+
+Issues & Resolution:
+I did not really face any issues with this program.
+
+Program 6: wind_chill.py
+
+Goal: The goal of this program is to take two command-line inputs t and v and compute the  wind chill using the formula
+
+Approach:
+I created two variables t (temperature) and v (velocity) and assigned them the values sys.argv[1] and sys.argv[2]
+I gave the formula needed to compute the wind chill 
+
+I used stdio.writeln(w) to print the computed value as a float. 
+
+Issues: 
+I did not face any issues with this program. 
+
+
+Program 7: gravitational_force.py
+
+Goal: The goal of this program is to take three command-line inputs m1, m2, and r and computes the gravitational force using the formula given.
+
+Approach:
+I created three variables m1, m2, and r and assigned them the values sys.argv[1], sys.argv[2], and sys.argv[3].
+I defined G as it is a required value for the formula.
+I provided the formula needed to compute the gravitational force. 
+
+I used stdio.writeln to write the computed results as standard output.
+
+Issues & Resolution:
+
+For this program, my code was not correct due to a precedence issue. 
+I resolved it by enclosing the numerator and denominator separately in brackets. 
+
+Program 8: Gambler's ruin 
+
+Goal: The goal of this program is to take three command-line inputs and compute the probabilities p1 and p2 using the formulas provided. 
+
+Approach:
+I created three variables n1, n2 and p and assigned the values sys.argv[1], sys.argv[2] and sys.argv[3] 
+I added float and int in order to change the type of input to an integer and float
+I gave the formula q = p - 1 to calculate the complement probability
+I defined two formulas for p1 and p2 that will be used to compute the probabilities.
+
+I used stdio.writeln to write the computed results as the standard output
+
+Issues & Resolution:
+
+At first my code was not working because i did not include the formula for q. 
+I resolved by defining q which fixed my code. 
+
+Program 9: Waiting Time
+
+Goal: The goal for this program is to compute the probability.
+
+Approach:
+I created two variables lmbda and t and assigned them the values sys.argv[1] and sys.argv[2] 
+I defined the formula for p needed to compute the probability.
+
+I used stdio.write to write the computed results as a standard output.
+
+Issues & Resolution:
+
+I struggled with this program because as per our assignment i needed to use lambda but i did not know how to write that in python. 
+I resolved that by looking through google and figuring how i can use lambda in python
+
+Program 10: Cartesian Coordinate
+
+Goal: The goal of this program is to convert r and theta into x and y coordinates. 
+
+Approach:
+I created two variables r and theta and assigned them the values sys.argv[1] and sys.argv[2]
+I defined x and y with the formulas needed to convert r and theta into x and y
+I used write.stdio to write the computed results as the standard output.
+
+Issues & Resolution:
+
+I struggled in this question beause i did not know how to do sin cos computations in Python.
+To esolve this issue i looked up in google how i can use sin and cos in python.
+
+Program 11: Great Circle Distance
+
+Goal: The goal of this program is to compute the great circle distance (d) in km between two points on earth  using their latitude and longitude points. 
+
+Approach:
+I created four variables named x1, y1, x2, and y2 and assignec them the values sys.argv[1], sys.argv[2], sys.argv[3] and sys.argv[4]
+I then used the math.radians to convert the values to radians which is suitable for the formula.
+I then defined the formula needed to compute the distance which required the use of math.sin, math.cos and math.acos
+
+I used stdio.writeln to the computed result as the standard output
+
+Issues & Resolution:
+In this program, i incorrectly defined the formula which resulted in the code not working. 
+To resolve this issue i had to rewrite the formula correctly. 
+
+Program 12: Snell's Law
+
+Goal: The goal of this program is to compute the angle of refraction
+
+Approach:
+I created three variables theta1, n1, and n2 and assigned them the values sys.argv[1], sys.argv[2] and sys.argv[3].
+I used math.radians to convert the values to radians as that it the suitable form for sin cos calculations
+I then defined the formula to find theta2 using Snell's law. 
+Once the computation is done, i convert the values back to degrees since the assignments asks the output to be in degree form
+
+I use stdio.writeln to write the final answer as the standard output
+
+Issues & Resolution:
+In this program, my code was initially incorrect because i wrongly defined the formula for snells law and used sin asin functions incorrectly.
+I resolved this by correctly the formulas and redefining the variables correctly to compute the value.
+
+
+Program 13: Uniform Random numbers
+
+Goal: The goal of this program is to generate three random numbers between a given range and calculate their, mean, variance and standard deviation.
+
+Approach:
+I created two variables a, b and assigned them the values sys.argv[1] and sys.argv[2]
+I then used stdrandom.uniformfloat to geenrate three random floating number between the range a and b.
+I added the formulas for mean, variance and standard deviation.
+
+I then used stdio.writeln to write the final values computed as the standard output.
+
+Issues & Resolution: 
+I did not know how to generate random numbers in Python so i had to look it up.
+To resolve this issue, i imported the stdrandom library and used it to generate the values.
+
+Program 14: Die Roll
+
+Goal: The goal of this program is to take the n value (number of sides of a die) as an input value and then generate two rolls of those dies. 
+The final result of this program is to find the sum of the two randomly generated rolls. 
+
+Approach:
+I created one variable named n and assigned it the value sys.argv[1] 
+I then used stdrandom.uniformInt to generate an integer between the range 1 and n + 1
+I then defined the variable sum as value of roll 1 + value to roll 2 
+
+I then used stdio.writeln to write the value of computed value as the standard output
+
+Issues & Resolution: 
+In this program, my code initially did not work because i set the range as (1, n) which made the range non-inclusive of n
+I resolved this issue by setting the upper bound of the range as n + 1 so that n was inclusive
+
+Program 15: Triangle Inequality
+
+Goal: The goal of this program is to check if the three sides given can form a triangle. 
+
+Approach:
+I created three variables x, y, and z and assigned them the values sys.argv[1], sys.argv[2] and sys.argv[3]
+I then set expr as the conditions needed to satisfy the triangle inequality. 
+I used the stdio.writeln to write the computed result of the program, true or false. 
+
+Issues & Resolution: 
+
+At first, i thought i have to individually define the three conditions so i could not fgure out how.
+To resolve the issue, i finally added all the three conditions and equated it to expr to check the validity of the triangle. 
+
+
+
+
+
